@@ -154,7 +154,7 @@
         var nextKeys = Object.keys(next);
         var previousKeys = Object.keys(previous);
         var removedKeys = previousKeys.filter(function (key) {
-          return nextKeys.indexOf(key) === -1;
+          return typeof next[key] === 'undefined';
         });
 
         nextKeys.filter(function (key) {
